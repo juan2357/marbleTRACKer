@@ -12,41 +12,18 @@ print(mydb)
 
 mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM tweets")
+allDB = "SELECT * FROM tweets"
+
+mostPopularTeam = "SELECT hashtags AS Team, user_name as User, comment as comments, count(*) AS popTeam from tweets GROUP BY Team ORDER BY popTeam desc LIMIT 3"
+
+teamLocation = "SELECT hashtags as Team, location_state as FanState, count(*) as TeamLocation from tweets GROUP BY Team ORDER BY TeamLocation desc limit 3"
+
+mycursor.execute(teamLocation)
 
 myresult = mycursor.fetchall()
 
 for x in myresult:
 
-  print(json.dumps(myresult, indent = 2))
+  print(json.dumps(myresult, indent = 3))
 
 mydb.close()
-
-# mydb = mysql.connector.connect(
-#   host = "database-1.c3gkloztdhyp.us-east-1.rds.amazonaws.com",
-#   user="admin",
-#   passwd="12345678",
-#   database="marble"
-# )
-#
-# print(mydb)
-#
-# mycursor = mydb.cursor()
-#
-# mycursor.execute("SELECT * FROM tweets")
-#
-# row_headers=[x[0] for x in mycursor.description]
-#
-# rv = cur.fetchall()
-#    json_data=[]
-#    for result in rv:
-#         json_data.append(dict(zip(row_headers,result)))
-#    return json.dumps(json_data)
-# #
-# # myresult = mycursor.fetchall()
-# #
-# # x[0] for x in myresult:
-# #
-# #   print(x)
-#
-# mydb.close()
