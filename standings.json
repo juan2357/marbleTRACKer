@@ -1,9 +1,9 @@
 class standings{
     "teams":[
-        { "name": "Team 1", "wins":30, "loses":10},
-        { "name": "Team 2", "wins":20, "loses":20},
-        { "name": "Team 3", "wins":25, "loses":15},
-        { "name": "Team 4", "wins":17, "loses":23},
-        { "name": "Team 5", "wins":35, "loses":5},
+        { "name": "Savage Speeders", "wins":30, "loses":10},
+        { "name": "Thunderbolts", "wins":20, "loses":20},
+        { "name": "Snowballs", "wins":25, "loses":15},
+        { "name": "Minty Maniacs", "wins":17, "loses":23},
+        { "name": "Chocolatiers", "wins":35, "loses":5},
     ]
 }
