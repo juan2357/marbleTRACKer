@@ -24,7 +24,7 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
 
-    with open('allDB.json', 'w') as out_file:
+    with open('json/allDB.json', 'w') as out_file:
 
         out_file.write('var allDB = %s;' % json.dumps(myresult, indent = 3))
 
@@ -34,7 +34,7 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
 
-    with open('teamLocation.json', 'w') as out_file:
+    with open('json/teamLocation.json', 'w') as out_file:
 
         out_file.write('var teamLocation = %s;' % json.dumps(myresult, indent = 3))
 
@@ -44,7 +44,7 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
 
-    with open('mostPopularTeam.json', 'w') as out_file:
+    with open('json/mostPopularTeam.json', 'w') as out_file:
 
         out_file.write('var mostPopularTeam = %s;' % json.dumps(myresult, indent = 3))
 
