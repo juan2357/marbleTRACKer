@@ -24,6 +24,8 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
 
-  print(json.dumps(myresult, indent = 3))
+    print(x)
+
+    # print(json.dumps(myresult, indent = 3))
 
 mydb.close()
