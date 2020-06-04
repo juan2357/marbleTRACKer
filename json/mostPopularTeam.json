@@ -1,0 +1,20 @@
+var mostPopularTeam = [
+   [
+      "#chocolatiers", 
+      "Macy", 
+      "Chocolatiers will not lose!", 
+      8
+   ], 
+   [
+      "#jawbreakers", 
+      "Josiah", 
+      "I am all about that Jawbreaker life", 
+      6
+   ], 
+   [
+      "#mintymaniacs", 
+      "Roy", 
+      "Where are my minty fans??", 
+      5
+   ]
+];
