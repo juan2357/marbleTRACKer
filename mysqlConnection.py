@@ -18,7 +18,7 @@ mostPopularTeam = "SELECT hashtags AS Team, user_name as User, comment as commen
 
 teamLocation = "SELECT hashtags as Team, location_state as FanState, count(*) as TeamLocation from tweets GROUP BY Team ORDER BY TeamLocation desc limit 3"
 
-mycursor.execute(teamLocation)
+mycursor.execute(allDB)
 
 myresult = mycursor.fetchall()
 
@@ -38,7 +38,7 @@ for x in myresult:
 
         out_file.write('var teamLocation = %s;' % json.dumps(myresult, indent = 3))
 
-mycursor.execute(teamLocation)
+mycursor.execute(mostPopularTeam)
 
 myresult = mycursor.fetchall()
 
